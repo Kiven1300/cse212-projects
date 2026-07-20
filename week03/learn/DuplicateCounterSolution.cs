@@ -30,16 +30,19 @@
     /// </summary>
     private static int CountDuplicates(int[] data)
     {
-        // Add code here.
-        var unique = new HashSet<int>();
+        var seen = new HashSet<int>();
         var duplicates = 0;
 
-        foreach (var x in data)
+        foreach (var number in data)
         {
-            if (unique.Contains(x))
+            if (seen.Contains(number))
+            {
                 duplicates++;
+            }
             else
-                unique.Add(x);
+            {
+                seen.Add(number);
+            }
         }
 
         return duplicates;
