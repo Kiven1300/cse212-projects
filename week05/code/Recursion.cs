@@ -19,6 +19,18 @@ public static class Recursion
     }
 
     /// <summary>
+    /// Simple recursive sum from 1 to n. Returns 0 for n <= 0.
+    /// </summary>
+    public static int Sum(int n)
+    {
+        if (n <= 0)
+            return 0;
+        if (n == 1)
+            return 1;
+        return n + Sum(n - 1);
+    }
+
+    /// <summary>
     /// #############
     /// # Problem 2 #
     /// #############
